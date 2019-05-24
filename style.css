@@ -1,0 +1,268 @@
+.h{
+    font-family: 'Arial' ,sans-serif;
+    font-weight: 600;
+    color: grey;
+}
+
+header{
+    text-align: center;
+    justify-content: center;
+    background-color: lightgrey;
+    height: 200px;
+}
+
+.g{
+    font-family: 'Arial' ,sans-serif;
+    color: grey;
+    transition-duration: 1s;
+    text-decoration: none;
+        
+}
+
+.gg{
+    font-family: 'Arial' ,sans-serif;
+    color: grey;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+
+.ggg{
+    font-family: 'Arial' ,sans-serif;
+    color: grey;
+    transition-duration: 1s;
+    text-decoration: none;
+}
+
+footer{
+    height: 100px;
+    background-color: lightgray;
+    justify-content: center;
+    text-align: center;
+}
+
+.v{
+color: grey;
+position: absolute;
+padding-top: 20px;
+padding-left: 20px;
+}
+
+.y{
+color: grey;
+position: absolute;
+padding-left: 90px;
+padding-top: 20px;
+}
+
+.ins{
+color: grey;
+position: absolute;
+padding-left: 165px;
+padding-top: 20px;
+}
+
+.s{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+main{
+  justify-content: center;
+    text-align: center;
+    height: 710px;
+}
+.so{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.s2{
+height: 170px;
+color: lightgray;
+    border: 3px solid lightgrey;
+}
+
+.t{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.to{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.t2{
+height: 185px;
+color: lightgray;
+    border: 3px solid lightgrey;
+}
+
+.c{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.co{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.c2{
+height: 170px;
+color: lightgray;
+    border: 3px solid lightgrey;
+}
+
+.d{
+    font-family: 'Arial' ,sans-serif;
+    color: grey; 
+}
+
+.do{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.d2{
+height: 170px;
+border: 3px solid lightgrey;
+}
+
+.name{
+font-family: 'Arial' ,sans-serif;
+color: grey;
+position: absolute;
+}
+
+.dal{
+font-family: 'Arial' ,sans-serif;
+color: grey;
+transition-duration: 1s;
+}
+
+div{
+    justify-content: center;
+    text-align: center;
+}
+
+.dal:hover{
+    color:lightgray;
+}
+
+.g:hover{
+    color:white;
+}
+
+.gg:hover{
+    color:white;
+}
+
+.ggg:hover{
+    color:white;
+}
+
+.Onas{
+   font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 50px; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.j{
+    font-family: 'Arial' ,sans-serif;
+    color: grey; 
+}
+
+.jo{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.j2{
+height: 190px;
+border: 3px solid lightgrey;
+}
+
+.k{
+    font-family: 'Arial' ,sans-serif;
+    color: grey; 
+}
+
+.ko{
+  font-family: 'Arial' ,sans-serif;
+    color: grey;  
+}
+
+.k2{
+border: 3px solid lightgrey;
+}
+
+.poezdone{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+.poezd{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+
+.xiaomione{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+.xiaomi{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+
+.serone{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+.ser{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+
+.ilonmask{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 25px;
+}
+.ilon{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+
+.dirkaone{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 25px;
+}
+.dirka{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+
+.domikone{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
+.domik{
+     font-family: 'Arial' ,sans-serif;
+    color: grey;
+    font-size: 30px;
+}
