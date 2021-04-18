@@ -11,16 +11,43 @@
  <h1 class='h'><i class="fas fa-laptop"></i>  НОВОСТИ ТЕХНОЛОГИЙ</h1>
 <h2 class="g"><font color="white"><i class="fab fa-hotjar"></i>  Новейшие</font></h2>
 <a href="index.html"><h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i>  Популярные</h2></a>
-<a href="O%20nas.html"><h2 class="ggg"><i class="fas fa-home"></i>  О нас</h2></a>
+<a href="O%20nas.html"><h2 class="ggg"><i class="fa fa-users"></i>  Отзывы</h2></a>
+     <a href="profil.html">
+            <h2 class="ggg"><i class="fa fa-user-circle"></i> Профиль</h2>
+        </a>
  </header>
  <main>
-     <div class="j2"><h2 class="j">Скоро появится первая деревня, созданная с<br> помощью 3D-принтеров</h2><p class="jo">Дизайнер Yves Béhar только что раскрыл планы создания первой деревни, которая полностью будет<br> изготовлена с применением 3D-печати. Она должна была появиться в Латинской Америке и...</p><a href="3dderevny.html"><h2 class="dal">Читать дальше</h2></a></div>
-     <div class="k2"><h2 class="k">Начались испытания сверхбыстрого поезда</h2><p class="ko">Японцы представили самый быстрый в мире поезд с...</p><a href="poezd.html"><h2 class="dal">Читать дальше</h2></a></div>
-     <div class="d2"><h2 class="d">Xiaomi отправил Redmi Note 7 в стратосферу</h2><p class="do">В рамках рекламной акции недорогой модели Redmi Note 7, Xiaomi решила отправить свой<br> смартфон в стратосферу. Он не только вернулся на Землю, но...</p><a href="xiaomi.html"><h2 class="dal">Читать дальше</h2></a></div>
+     <div class="j2"><h2 class="j">Скоро появится первая деревня, созданная с помощью 3D-принтеров</h2><p class="jo">Дизайнер Yves Béhar только что раскрыл планы создания первой деревни, которая полностью будет<br> изготовлена с применением 3D-печати. Она должна была появиться в Латинской Америке и...</p><a href="3dderevny.html"><h2 class="dal">Читать дальше</h2></a></div>
+     <div class="k2"><h2 class="k">Технология SelfieType от Samsung позволит печатать на любой поверхности</h2><p class="ko">Мы уже сообщали о том, что компания Samsung представит на CES-2020 целую россыпь новых технологий...</p><a href="poezd.html"><h2 class="dal">Читать дальше</h2></a></div>
+     <div class="d2"><h2 class="d">Huami Amazfit Bip S – смарт-часы с великолепным временем автономной работы</h2><p class="do">На выставке CES 2020 бренд Huami представила несколько новых наручных умных часов,<br> на которые определенно стоит обратить внимание и...</p><a href="xiaomi.html"><h2 class="dal">Читать дальше</h2></a></div>
      
 </main>
  <footer>
-     <h2 class="name">Ильин Кирилл 2019</h2>
+     <h2 class="name">Ильин Кирилл 2020</h2>
+     <div class="ttt">UP</div>
  </footer>
+ <script>
+        'use strict'
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bar').style.width = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3)
+        })
+    </script>
 </body>
 </html>

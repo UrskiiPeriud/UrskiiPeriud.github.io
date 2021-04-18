@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
+    
 <body>
- <header>
- <h1 class='h'><i class="fas fa-laptop"></i>  НОВОСТИ ТЕХНОЛОГИЙ</h1>
-<a href="novoe.html"><h2 class="g"><i class="fab fa-hotjar"></i>  Новейшие</h2></a>
-<h2 class="gg"><font color="white"><i class="fas fa-long-arrow-alt-up"></i>  Популярные</font></h2>
-<a href="O%20nas.html"><h2 class="ggg"><i class="fas fa-home"></i>  О нас</h2></a>
- </header>
- <main>
-     <div class="s2"><h2 class="s">В Израиле напечатали живое сердце на 3D-принтере</h2><p class="so">Ученые из Университета Тель-Авива смогли напечатать<br> крошечное живое сердце из тканей человека на 3D ...</p><a href="3dserdecko.html"><h2 class="dal">Читать дальше</h2></a></div>
-     <div class="t2"><h2 class="t">Первая машина в космосе: уже год на орбите<br> летает красная Tesla</h2><p class="to">на ракете Falcon Heavy был запущен спортивный электромобиль Tesla,<br> предоставленный американским предпринимателем Илоном...</p><a href="ilonmask.html"><h2 class="dal">Читать дальше</h2></a></div>
-     <div class="c2"><h2 class="c">Получена первая в истории фотография черной дыры</h2><p class="co">Совершить прорыв удалось благодаря объединению в одну глобальную сеть<br> восьми мощнейших радиотелескопов, расположенных по...</p><a href="dirka.html"><h2 class="dal">Читать дальше</h2></a></div>
-     <div class="d2"><h2 class="d">Xiaomi отправил Redmi Note 7 в стратосферу</h2><p class="do">В рамках рекламной акции недорогой модели Redmi Note 7, Xiaomi решила отправить свой<br> смартфон в стратосферу. Он не только вернулся на Землю, но...</p><a href="xiaomi.html"><h2 class="dal">Читать дальше</h2></a></div>
-     
-</main>
- <footer>
-     <h2 class="name">Ильин Кирилл 2019</h2>
- </footer>
-</body>
-</html>
+    
+    <header>
+        <h1 class='h'><i class="fas fa-laptop"></i> НОВОСТИ ТЕХНОЛОГИЙ</h1>
+        <a href="novoe.html">
+            <h2 class="g"><i class="fab fa-hotjar"></i> Новейшие</h2>
+        </a>
+        <h2 class="gg">
+            <font color="white"><i class="fas fa-long-arrow-alt-up"></i> Популярные</font>
+        </h2>
+        <a href="O%20nas.html">
+            <h2 class="ggg"><i class="fa fa-users"></i> Отзывы</h2>
+        </a>
+        <a href="profil.html">
+            <h2 class="ggg"><i class="fa fa-user-circle"></i> Профиль</h2>
+        </a>
+    </header>
+    <main>
+        <div class="s2">
+            <h2 class="s">Представлен логотип PlayStation 5 и раскрыты некоторые подробности</h2>
+            <p class="so">На пресс-конференции в ходе мероприятия CES 2020 Sony представила логотип PlayStation 5 <br> .Помимо этого, компания сообщила, что было продано более 5 миллионов гарнитур с момента запуска в октябре 2016 года...</p><a href="3dserdecko.html">
+                <h2 class="dal">Читать дальше</h2>
+            </a>
+        </div>
+        <div class="t2">
+            <h2 class="t">Audi на CES: умные автомобили и head-up дисплей с 3D</h2>
+            <p class="to">На выставке CES 2020 появился немецкий производитель из Ингольштадта.<br> Audi представила несколько решений, которые в будущем могут быть внедрены в интерьере автомобилей...</p><a href="ilonmask.html">
+                <h2 class="dal">Читать дальше</h2>
+            </a>
+        </div>
+        <div class="c2">
+            <h2 class="c">Самая эффективная батарея в мире обеспечит смартфону пять дней работы</h2>
+            <p class="co">Команда ученых австралийского Университета Монаша<br> разработала самую эффективную на сегодняшний день...</p><a href="dirka.html">
+                <h2 class="dal">Читать дальше</h2>
+            </a>
+        </div>
+        <div class="d2">
+            <h2 class="d">Huami Amazfit Bip S – смарт-часы с великолепным временем автономной работы</h2>
+            <p class="do">На выставке CES 2020 бренд Huami представила несколько новых наручных умных часов,<br> на которые определенно стоит обратить внимание и...</p><a href="xiaomi.html">
+                <h2 class="dal">Читать дальше</h2>
+            </a>
+        </div>
+
+    </main>
+    <footer>
+        <h2 class="name">Ильин Кирилл 2020</h2>
+        <div class="ttt">UP</div>
+    </footer>
+    <script>
+        'use strict'
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bard').style.width = (window.pageYOffset / (document.documentElement.scrollHeight -document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3)
+        })
+    </script>
+</body></html>

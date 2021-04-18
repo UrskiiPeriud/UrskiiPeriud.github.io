@@ -1,28 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
+
 <body>
- <header>
- <h1 class='h'><i class="fas fa-laptop"></i>  НОВОСТИ ТЕХНОЛОГИЙ</h1>
-<a href="novoe.html"><h2 class="g"><i class="fab fa-hotjar"></i>  Новейшие</h2></a>
-<a href="index.html"><h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i>  Популярные</h2></a>
-<a href="O%20nas.html"><h2 class="ggg"><i class="fas fa-home"></i>  О нас</h2></a>
- </header>
- <main>
-  <div>
-  <h2 class="xiaomi">Xiaomi отправил Redmi Note 7 в стратосферу</h2>
-      <p class="xiaomione">В рамках рекламной акции недорогой модели Redmi Note 7, Xiaomi решила отправить свой смартфон в стратосферу. Он не только вернулся на Землю, но и сделал несколько фотографий.</p>
-      <p class="xiaomione">На опубликованном на YouTube видео мы видим, как телефон поднимается на высоту 35 км, где сделал несколько снимков земной атмосфере. Более того, телефон выжил при температуре -58 градусов по Цельсию, а затем вернулся к своему владельцу в целости и сохранности.</p>
-</div>   
-     
-</main>
- <footer>
-     <h2 class="name">Ильин Кирилл 2019</h2>
- </footer>
-</body>
-</html>
+    <header>
+        <h1 class='h'><i class="fas fa-laptop"></i> НОВОСТИ ТЕХНОЛОГИЙ</h1>
+        <a href="novoe.html">
+            <h2 class="g"><i class="fab fa-hotjar"></i> Новейшие</h2>
+        </a>
+        <a href="index.html">
+            <h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i> Популярные</h2>
+        </a>
+        <a href="O%20nas.html">
+            <h2 class="ggg"><i class="fa fa-users"></i> Отзывы</h2>
+        </a>
+        <a href="profil.html">
+            <h2 class="ggg"><i class="fa fa-user-circle"></i> Профиль</h2>
+        </a>
+    </header>
+    <main class="bbbbb">
+        <div>
+            <h2 class="xiaomi">Huami Amazfit Bip S – смарт-часы с великолепным временем автономной работы</h2>
+            <p class="xiaomione">На выставке CES 2020 бренд Huami представила несколько новых наручных умных часов, на которые определенно стоит обратить внимание. Особо слеует выделить модель Amazfit Bip S – это смартчасы с великолепным аккумулятором.</p>
+            <p class="xiaomione">Huami производит известные в Китае часы Amazfit, которые в основном отличаются конкурентоспособной ценой и хорошей спецификацией. Последняя модель Amazfit Bip S понравится тем пользователям, кто не любит слишком часто заряжать свои гаджеты.</p>
+            <p class="xiaomione">Привезенная на выставку CES 2020 модель смарт-часов получила действительно мощный аккумулятор: рабочее время, по оценкам, до 40 дней в одном цикле. Аккумулятор, конечно, главный козырь Amazfit Bip S, но не единственный – часы имеют 1,28-дюймовый цветной сенсорный экран с покрытием, предохраняющего его от различных сюрпризов погоды. Кроме того, часы снабжены стеклом Gorilla Glass 3 и функцией Always on Display.</p>
+            <p class="xiaomione">Amazfit Bip S имеет водонепроницаемый корпус (5ATM), благодаря которому с ними можно плавать.
+Из характеристик Amazfit Bip S стоит выделить легкий вес 31 г, встроенный GPS с ГЛОНАСС, программное обеспечение Amazfit OS, подключение Bluetooth 5.0 и поддержку в общей сложности 10 спортивных режимов – включая бег на беговой дорожке. Кроме того, смарт-часы измеряет основные жизненные показатели и позволяют контролировать музыку, воспроизводимую на вашем смартфоне.</p>
+        </div>
+
+    </main>
+    <footer>
+        <h2 class="name">Ильин Кирилл 2020</h2>
+        <div class="ttt">UP</div>
+    </footer>
+    <script>
+        'use strict'
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bar').style.width = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3)
+        })
+    </script>
+</body></html>

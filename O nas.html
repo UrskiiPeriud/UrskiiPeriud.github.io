@@ -11,14 +11,58 @@
  <h1 class='h'><i class="fas fa-laptop"></i>  НОВОСТИ ТЕХНОЛОГИЙ</h1>
 <a href="novoe.html"><h2 class='g'><i class="fab fa-hotjar"></i>  Новейшие</h2></a>
 <a href="index.html"><h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i>  Популярные</h2></a>
-<h2 class="ggg"><font color="white"><i class="fas fa-home"></i>  О нас</font></h2>
+<h2 class="ggg"><font color="white"><i class="fa fa-users"></i>  Отзывы</font></h2>
+     <a href="profil.html">
+            <h2 class="ggg"><i class="fa fa-user-circle"></i> Профиль</h2>
+        </a>
  </header>
  <main>
-<div class="Onas"><p>Это сайт о новостях<br> современной технологий и д.р</p></div>
+<div>
+    <div class="s2">
+            <h2 class="s">Жмышенко Валерий Альбертович</h2>
+            <p class="lllll">Не ну реально классный и полезный сайт. Рекомендую тупа!</p>
+        </div>
+    <div class="s2">
+            <h2 class="s">Киселёв Василий Игоревич</h2>
+            <p class="lllll">Класс сайт, мало элементов javascript, а так сайт не плох. Рекомендую!</p>
+        </div>
+    <div class="s2">
+            <h2 class="s">Vovinchie`s Life</h2>
+            <p class="lllll">Хорошие и проработанный сайт, но при этом красивый. Ставлю лайк!</p>
+        </div>
+        <div class="s2">
+            <h2 class="s">Дэнчик Кулигин Иванович</h2>
+            <p class="lllll">А что я здэсь дэлаю? Мнэ нэнравитса вапстшэ.</p>
+        </div>
+</div>
      
 </main>
  <footer>
-     <h2 class="name">Ильин Кирилл 2019</h2>
+     <h2 class="name">Ильин Кирилл 2020</h2>
+     <div class="ttt">UP</div>
  </footer>
+ <script>
+        'use strict'
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bar').style.width = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3);
+        })
+    </script>
 </body>
 </html>

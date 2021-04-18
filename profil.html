@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link rel="stylesheet" href="css/uikit.min.css">
+</head>
+
+<body>
+    
+    <header>
+        <h1 class='h'><i class="fas fa-laptop"></i> НОВОСТИ ТЕХНОЛОГИЙ</h1>
+        <a href="novoe.html">
+            <h2 class="g"><i class="fab fa-hotjar"></i> Новейшие</h2>
+        </a>
+        <a href="index.html">
+            <h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i> Популярные</h2>
+        </a>
+        <a href="O%20nas.html">
+            <h2 class="ggg"><i class="fa fa-users"></i> Отзывы</h2>
+        </a>
+        <h2 class="profil">
+            <font color="white"><i class="fa fa-user-circle"></i> Профиль</font>
+        </h2>
+    </header>
+    <main>
+        <div class="bse">
+            <div class="your">Имя Фамилия</div>
+                    <!-- Имя пользователя -->
+                    <span id="userName" class="imia">
+                    </span>
+                    <!-- Аватар пользователя -->
+                    <img id="userImg" class="circle">
+                </div>  
+        <div class="plas">+</div>
+      <div class="dainomer">
+          <div class="numer">Номер телефона</div>
+          <div class="tele" id="random">
+    <script type="text/javascript">
+        var randomNumber; 
+        randomNumber = (Math.floor(Math.random() * (999999999999 - 10000000000) + 10000000000));
+        document.getElementById('random').innerHTML=randomNumber;
+    </script>
+</div>
+        </div>
+    </main>
+    <footer>
+        <h2 class="name">Ильин Кирилл 2020</h2>
+        <div class="ttt">UP</div>
+    </footer>
+    <script>
+        'use strict' 
+        function OnUserLoad(){
+            let user = JSON.parse(this.responseText)
+            document.getElementById('userName').innerHTML = user.firstName + ' ' + user.lastName
+            document.getElementById('userImg').src = user.img
+        }
+        let oReq = new XMLHttpRequest()
+        oReq.open('get', 'http://188.225.47.187/api/users/getrandom.php')
+        oReq.addEventListener('load', OnUserLoad)
+        oReq.send()
+        
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bard').style.width = (window.pageYOffset / (document.documentElement.scrollHeight -document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3)
+        })
+    </script>
+</body></html>

@@ -1,29 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
 </head>
+
 <body>
- <header>
- <h1 class='h'><i class="fas fa-laptop"></i>  НОВОСТИ ТЕХНОЛОГИЙ</h1>
-<a href="novoe.html"><h2 class="g"><i class="fab fa-hotjar"></i>  Новейшие</h2></a>
-<a href="index.html"><h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i>  Популярные</h2></a>
-<a href="O%20nas.html"><h2 class="ggg"><i class="fas fa-home"></i>  О нас</h2></a>
- </header>
- <main>
-  <div>
-  <h2 class="domik">Скоро появится первая деревня, созданная с помощью 3D-принтеров</h2>
-      <p class="domikone">Дизайнер Yves Béhar только что раскрыл планы создания первой деревни, которая полностью будет изготовлена с применением 3D-печати. Она должна была появиться в Латинской Америке и помочь бедным семьям в этом регионе.</p>
-      <p class="domikone">Проект создания целой деревни с помощью 3D-печати возник из вполне благородных побуждений – речь идет о глобальной проблеме бездомности. Béhar рассказал, что было решено спроектировать целую систему, которая позволила бы реализовать разные программы, принимая во внимание климатические условия и возможность для развития семей.</p>
-      <p class="domikone">Пока авторы проекта не сообщили, где может появится первая такая деревня. Однако известно, что речь идет об акклиматизации фермерских семей, которые часто живут в маленьких домах и зарабатывают 200 долларов в месяц. New Story считает, что создание такого жилья позволит вытянуть людей из нищеты и обеспечить им немного лучшее будущее.</p>
-</div>   
-     
-</main>
- <footer>
-     <h2 class="name">Ильин Кирилл 2019</h2>
- </footer>
+    <header>
+        <h1 class='h'><i class="fas fa-laptop"></i> НОВОСТИ ТЕХНОЛОГИЙ</h1>
+        <a href="novoe.html">
+            <h2 class="g"><i class="fab fa-hotjar"></i> Новейшие</h2>
+        </a>
+        <a href="index.html">
+            <h2 class="gg"><i class="fas fa-long-arrow-alt-up"></i> Популярные</h2>
+        </a>
+        <a href="O%20nas.html">
+            <h2 class="ggg"><i class="fa fa-users"></i> Отзывы</h2>
+        </a>
+        <a href="profil.html">
+            <h2 class="ggg"><i class="fa fa-user-circle"></i> Профиль</h2>
+        </a>
+    </header>
+    <main>
+        <div>
+            <h2 class="domik">Скоро появится первая деревня, созданная с помощью 3D-принтеров</h2>
+            <p class="domikone">Дизайнер Yves Béhar только что раскрыл планы создания первой деревни, которая полностью будет изготовлена с применением 3D-печати. Она должна была появиться в Латинской Америке и помочь бедным семьям в этом регионе.</p>
+            <p class="domikone">Проект создания целой деревни с помощью 3D-печати возник из вполне благородных побуждений – речь идет о глобальной проблеме бездомности. Béhar рассказал, что было решено спроектировать целую систему, которая позволила бы реализовать разные программы, принимая во внимание климатические условия и возможность для развития семей.</p>
+            <p class="domikone">Пока авторы проекта не сообщили, где может появится первая такая деревня. Однако известно, что речь идет об акклиматизации фермерских семей, которые часто живут в маленьких домах и зарабатывают 200 долларов в месяц. New Story считает, что создание такого жилья позволит вытянуть людей из нищеты и обеспечить им немного лучшее будущее.</p>
+        </div>
+
+    </main>
+    <footer>
+        <h2 class="name">Ильин Кирилл 2020</h2>
+        <div class="ttt">UP</div>
+    </footer>
+    <script>
+        'use strict'
+        let upT;
+
+        function up() {
+            window.scrollBy(0, -10);
+            if (window.pageYOffset <= 0) {
+                clearInterval(upT);
+            }
+        }
+        document.addEventListener("scroll", function() {
+            let fotElement = document.querySelector(".ttt");
+            if (window.pageYOffset > 10) {
+                fotElement.style.opacity = "1";
+            } else {
+                fotElement.style.opacity = "0";
+            }
+            document.querySelector('.bar').style.width = (window.pageYOffset / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100) + '%';
+        });
+        document.querySelector('.ttt').addEventListener('click', function() {
+            upT = setInterval(up, 3)
+        })
+    </script>
 </body>
+
 </html>
